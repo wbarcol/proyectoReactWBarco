@@ -1,12 +1,16 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Home from './components/Home';
+import NvBar from './components/NvBar';
+
 
 function App() {
 
-  let mystring = 'BIENVENIDOS A LA TIENDA BYV BIKESTORE';
+
   return (
     <div className="App">
-    {mystring}
+<NvBar/>
+<Home/>
     </div>
   );
 }
