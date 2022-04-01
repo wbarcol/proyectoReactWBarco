@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Home from './components/Home';
+import ItemListContainer from './components/ItenListContainer';
 import NvBar from './components/NvBar';
 
 
@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
 <NvBar/>
-<Home/>
+<ItemListContainer/>
     </div>
   );
 }

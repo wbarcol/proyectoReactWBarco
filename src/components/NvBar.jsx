@@ -1,8 +1,10 @@
 
 import React from 'react';
 import logo from '../assets/img/logo.png'
-import { Container, Navbar, Nav, NavDropdown} from 'react-bootstrap';
+import { Container, Navbar, Nav, NavDropdown,} from 'react-bootstrap';
 import '../App.css';
+import Icon from './Icon';
+
 
 
 export default function NvBar(){
@@ -22,6 +24,7 @@ export default function NvBar(){
           <NavDropdown.Item href="#action/3.2">Tutoriales</NavDropdown.Item>
           <NavDropdown.Item href="#action/3.3">Clientes</NavDropdown.Item>
         </NavDropdown>
+        <Nav.Link href="#link"><Icon cant={0} /></Nav.Link>
       </Nav>
     </Navbar.Collapse>
   </Container>
