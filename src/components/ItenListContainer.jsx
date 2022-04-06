@@ -5,7 +5,7 @@ import Caracter from "./Caracter";
 import ItemList from "./ItemList";
 import customFetch from '../Utils/customFetch';
 import productos from '../Utils/productos';
-import ItemCount from './ItemCount'
+
 
 export default function ItemListContainer(props){
 
@@ -32,7 +32,7 @@ export default function ItemListContainer(props){
         caract3 = {{nombre:"Envios a nivel Nacional", icono:<i className="fas fa-truck fa-4x"></i>}}
     />
 
-<ItemCount stock={5}/>
+<ItemList productos={items}/>
 
 
 </div>
