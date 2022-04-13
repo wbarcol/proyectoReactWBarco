@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
-import ItemListContainer from './components/ItenListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer';
 import NvBar from './components/NvBar';
+import Principal from './components/Principal';
 
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
   return (
     <div className="App">
 <NvBar/>
-<ItemListContainer/>
+<Principal/>
+<ItemDetailContainer/>
     </div>
   );
 }

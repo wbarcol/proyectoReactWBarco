@@ -1,17 +1,14 @@
-const productos = [
+
+const productos = 
     {
         id: 1,
         nombre: 'Manubrio',
-        precio: 'U$S 8',
-        imagen: 'https://picsum.photos/200/300/?random',
-    },
+        precio: 'U$D 8',
+        imagen: 'https://github.com/wbarcol/proyectoReactWBarco/blob/da53db318a575cf927b85c6348cdbf630d231ac0/src/assets/img/manubrio.jpg?raw=true',
+        cantidad: 5,
+        detalles: 'Manubrio de aluminio c/s barra para MTB',
 
-    {
-        id: 2,
-        nombre: 'Asiento',
-        precio: 'U$S 9',
-        imagen: 'https://picsum.photos/200/300/?random',
     }
-]
+
 
 export default productos;

@@ -22,10 +22,10 @@ function ItemCount({stock}) {
 
   return (
     <div>
-  <p>{count}</p>
-  <Button onClick={adding} variant="success"> <i className="iconoCarrito fas fa-cart-plus"></i> </Button>{' '}
+  <p>🛒{count}</p>
+  <Button onClick={adding} className='btn btn-warning'> <i className="iconoCarrito fas fa-cart-plus"></i> </Button>{' '}
   <Button onClick={onAdd} variant="dark">COMPRAR</Button>{' '}
-  <Button onClick={subs} variant="success"><i className="iconoCarrito fas fa-minus-square"></i></Button>{' '}
+  <Button onClick={subs} className='btn btn-warning'><i className="iconoCarrito fas fa-minus-square"></i></Button>{' '}
 
 
     </div>
