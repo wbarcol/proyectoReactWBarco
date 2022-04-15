@@ -24,7 +24,7 @@ function ItemCount({stock}) {
     <div>
   <p>🛒{count}</p>
   <Button onClick={adding} className='btn btn-warning'> <i className="iconoCarrito fas fa-cart-plus"></i> </Button>{' '}
-  <Button onClick={onAdd} variant="dark">COMPRAR</Button>{' '}
+  <Button onClick={onAdd} variant="btn btn-warning">COMPRAR</Button>{' '}
   <Button onClick={subs} className='btn btn-warning'><i className="iconoCarrito fas fa-minus-square"></i></Button>{' '}
 
 

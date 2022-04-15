@@ -4,6 +4,8 @@ import '../App.css';
 export default function Caracter(props){
 
     return(
+<>
+      <div className="imgPrincipal"> </div>
 <div>
 
     <div className="caracteristicas">
@@ -22,5 +24,6 @@ export default function Caracter(props){
     </div>
 
 </div>
+</>
     );
 }

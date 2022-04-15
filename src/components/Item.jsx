@@ -1,28 +1,49 @@
 import React from 'react'
-import ItemCount from './ItemCount'
+import { Link } from 'react-router-dom';
+
+// import ItemCount from './ItemCount'
 // import Card  from 'react-bootstrap/Card'
 
-function Item({id, nombre, precio, imagen, cantidad, detalles}) {
+function Item({product}) {
   return (
 
-<div className='mainProductos' key={id}>
-<div className='containerProductos'>
-  <div className='producto'>
-    <img src={imagen} alt=""/>
-    <div className='descripcionProducto'>
-    <h3 className='productoTitulo'>{nombre}</h3>
-    <h6 className='cantidadProducto'>{cantidad} disponibles</h6>
-    <p className='productoDetalles'>{detalles}</p>
-    <span className='productoPrecio'>{precio}</span>
-    </div>
-    <div>
-  <ItemCount stock={cantidad}/>
-    </div>
-    </div>
+    <div className="group relative">
+              <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
+                <img
+                  src={product.imagen}
+                  alt=""
+                  className="w-full h-full object-center object-cover lg:w-full lg:h-full"
+                />
+              </div>
+              <div className="mt-4 flex justify-between">
+                <div>
+                  <h3 className="text-sm text-gray-700">
+                  <Link to={`/item/${product.id}`}>
 
-  </div>
+                      <span aria-hidden="true" className="absolute inset-0" />
+                      {product.nombre}
 
-</div>
+                  </Link>
+                  </h3>
+                  <p className="mt-1 text-sm text-gray-500">{product.cantidad +  ' Disponibles'}</p>
+                </div>
+                <p className="text-sm font-medium text-gray-900">{product.precio}</p>
+              </div>
+            </div>
+
+    
+
+    // <div className='producto'>
+    // <img src={producto.imagen} alt=""/>
+    // <div className='descripcionProducto'>
+    // <h3 className='productoTitulo'>{producto.nombre}</h3>
+    // <div>
+    // <Link to={`/item/${producto.id}`}>Ver detalle</Link>
+    // </div>
+    // <span className='productoPrecio'>{producto.precio}</span>
+    // </div>
+    // </div>
+
 
 /* <Card key={id} style={{ width: '18rem' }}>
         <Card.Img variant="top" src={imagen} />

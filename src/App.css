@@ -12,7 +12,7 @@
 .imgPrincipal {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 80vh;
+  grid-template-rows: 60vh;
 align-items:flex-end;
 justify-items:end; 
 background-image: url(../src/assets/img/portada.jpg);
@@ -21,23 +21,6 @@ background-size: cover;
 background-position: center;
 }
 
-
-.btnComprar {
-padding: 30px;
-border-bottom: 70px;
-}
-
-.btnComprar a {
-
-color: black;
-font-family: "Roboto", sans-serif;
-font-size: 15px;
-display: block;
-text-transform: uppercase;
-margin-top: 5px;
-margin-bottom: 5px;
-font-weight: bold;
-cursor: pointer; }
 
 .caracteristicas {
   display: grid;
@@ -64,38 +47,68 @@ font-size: 15px;
 
 }
 
-      /* COMPRAS/CATALOGO */
+/* DETALLES */
 
-      .mainProductos{
-        padding: 20px;
-      }
-
-.producto{
-  border: 1px solid #ccc;
-  padding: 20px;
-  text-align: center;
-}
-
-.producto img{
-  width: 100%;
-  height: 200px;
-}
-
-.containerProductos{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 10px;
+.containerDetail {
+  display: flex;
   justify-content: center;
+  align-items: center;
+  width: 100vh;
+  margin: 0 auto;
 }
 
-.productoTitulo{
-  text-align: center;
-  font-size: 30px;
-  color: #ffc107;
+.containerDetail img {
+  width: 450px;
+  margin: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 12px 2px #4b4b4b3e;
 }
 
-.productoPrecio{
-  color: #ffc107;
-  font-weight: bold;
+.containerDetail .containerDetailInfo {
+  margin: 15px 20px;
+  width: 80%;
+}
 
+h2 {
+  color: #ff8000;
+  margin-bottom: 16px;
+}
+
+p {
+  font-weight: 300;
+  font-size: 14px;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.description {
+  font-weight: 700;
+  font-size: 50px;
+  color: black;
+}
+
+.containerDetailInfoPrice {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.containerDetailInfoPrice h3 {
+  font-size: 19px;
+  font-weight: 300;
+  text-decoration: line-through;
+  margin-right: 10px;
+}
+
+/* BANNER */
+.banner {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 30vh;
+align-items:flex-end;
+justify-items:end; 
+background-image: url(../src/assets/img/banner.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
 }
