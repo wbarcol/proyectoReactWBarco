@@ -14,17 +14,17 @@ export default function NvBar(){
 <div>
 <Navbar bg="light" expand="lg">
   <Container>
-    <Navbar.Brand><Link to={'/'}> <img src={logo} className="logoNav"/> </Link></Navbar.Brand>
+    <Navbar.Brand as={Link} to={'/'}> <img src={logo} className="logoNav"/></Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">
-        <Nav.Link><Link to={'/'}>INICIO</Link></Nav.Link>
+        <Nav.Link as={Link} to={'/'}>INICIO</Nav.Link>
         <Nav.Link href="#link">NOSOTROS</Nav.Link>
         <NavDropdown title="COMPRAR" id="basic-nav-dropdown">
-          <NavDropdown.Item> <Link to={'/category/repuestos'}> REPUESTOS</Link></NavDropdown.Item>
-          <NavDropdown.Item><Link to={'/category/accesorios'}> ACCESORIOS</Link></NavDropdown.Item>
+          <NavDropdown.Item as={Link} to={'/category/repuestos'}> REPUESTOS </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to={'/category/accesorios'}> ACCESORIOS</NavDropdown.Item>
         </NavDropdown>
-        <Nav.Link href="#link"><Icon cant={0} /></Nav.Link>
+        <Nav.Link as={Link} to={'/cart'} ><Icon cant={0} /></Nav.Link>
       </Nav>
     </Navbar.Collapse>
   </Container>

@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ItemCount from './ItemCount'
+import Button from 'react-bootstrap/Button'
+import { Link } from 'react-router-dom';
 
 // import Item from './Item'
 
 function ItemDetail({nombre, precio, imagen, cantidad, detalles}) {
+
+const [carrito, setCarrito] = useState(0);
+
+  const addCart = (count) =>{
+   setCarrito(count)
+  }
+
+  console.log(carrito);
+
   return (
 
     <div className='containerDetail'>
@@ -20,7 +31,10 @@ function ItemDetail({nombre, precio, imagen, cantidad, detalles}) {
             <h3>{precio}</h3>
         </div>
 
-        <ItemCount stock={cantidad}/>
+        {
+        (carrito === 0) ? <ItemCount stock={cantidad} addCart={addCart}/> : <Link to={'/cart'}> <Button className='btn btn-warning'>IR AL CARRITO</Button> </Link>
+        }
+
     </div>
 </div>
 
