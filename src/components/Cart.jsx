@@ -57,7 +57,7 @@ const CartDetail = () => {
                       onClick={() => removeFromCart(item.id)}
                       className='font-semibold hover:text-red-500 text-gray-500 text-xs'
                     >
-                      Remove
+                      Eliminar
                     </button>
                   </div>
                 </div>
