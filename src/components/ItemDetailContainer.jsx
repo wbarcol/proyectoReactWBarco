@@ -23,14 +23,6 @@ export default function ItemDetailContainer(){
             });
     }, [id]);
 
-        // const [item, setItem] = useState({});
-    
-        // useEffect(() => {
-        //     customFetch(1000, productos)
-        //     .then(resultado => setItem(resultado))
-        //     .catch(error => console.log(error));
-        // }, [item])
-
     return(
 
 
@@ -42,8 +34,6 @@ export default function ItemDetailContainer(){
         <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-1 lg:grid-cols-1 xl:gap-x-8">
 
 
-{/* <div className='mainProductos'>
-<div className='containerProductos'> */}
 <ItemDetail {...producto}/>
 </div>
 </div>

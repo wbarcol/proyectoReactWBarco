@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import Button from 'react-bootstrap/Button'
 
-function ItemCount({stock, addCart}) {
-    const [ count, setCount] = useState(0);
+
+
+
+function ItemCount({stock, onAdd}) {
+    const [ count, setCount] = useState(1);
     
     function adding() {
         if (count < stock)
@@ -10,26 +13,29 @@ function ItemCount({stock, addCart}) {
     }
 
     function subs() {
-        if (count > 0)
+        if (count > 1)
         setCount(count - 1)
         
     }
 
-    function onAdd() {
-        addCart(count);
-    }
+
+
 
 
   return (
     <div>
-  <p>🛒{count}</p>
+      <p>🛒{count}</p>
   <Button onClick={adding} className='btn btn-warning'> <i className="iconoCarrito fas fa-cart-plus"></i> </Button>{' '}
-  <Button onClick={onAdd} variant="btn btn-warning">COMPRAR</Button>{' '}
-  <Button onClick={subs} className='btn btn-warning'><i className="iconoCarrito fas fa-minus-square"></i></Button>{' '}
 
+  <Button onClick={() =>{onAdd(count)}}
+  
+   variant="btn btn-warning">AGREGAR</Button>{' '} 
+
+  <Button onClick={subs} className='btn btn-warning'><i className="iconoCarrito fas fa-minus-square"></i></Button>{' '}
 
     </div>
   )
 }
 
 export default ItemCount
+

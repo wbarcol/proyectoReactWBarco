@@ -1,55 +1,47 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import ItemCount from './ItemCount'
 import Button from 'react-bootstrap/Button'
 import { Link } from 'react-router-dom';
+import { CartContext } from '../contex/CartContex'
+
 
 // import Item from './Item'
 
-function ItemDetail({nombre, precio, imagen, cantidad, detalles}) {
+function ItemDetail(producto) {
 
-const [carrito, setCarrito] = useState(0);
+  const { addToCart} = useContext(CartContext);
+ 
+  const [goCart, setGoCart] = useState(0);
 
-  const addCart = (count) =>{
-   setCarrito(count)
-  }
+const onAdd = (count) =>{
+  setGoCart(count)
+  addToCart({...producto, count}); 
+}
 
-  console.log(carrito);
+
 
   return (
 
     <div className='containerDetail'>
-    <img src={imagen} alt={nombre} />
+    <img src={producto.imagen} alt={producto.nombre} />
     <div className='containerDetailInfo'>
-        <h2>{cantidad + ' Disponibles'}</h2>
+        <h2>{producto.cantidad + ' Disponibles'}</h2>
         <h2 className='description'>
-            {nombre}
+            {producto.nombre}
         </h2>
         <p>
-          {detalles}
+          {producto.detalles}
         </p>
         <div className='containerDetailInfoPrice'>
-            <h3>{precio}</h3>
+            <h3>U$D {producto.precio}</h3>
         </div>
 
         {
-        (carrito === 0) ? <ItemCount stock={cantidad} addCart={addCart}/> : <Link to={'/cart'}> <Button className='btn btn-warning'>IR AL CARRITO</Button> </Link>
+        (goCart === 0) ? <ItemCount stock={producto.cantidad} onAdd={onAdd} /> : <Link to={'/cart'}> <Button onClick={() =>{setGoCart(0)}} className='btn btn-warning'>IR AL CARRITO</Button> </Link> 
         }
 
     </div>
 </div>
-
-  //   <div className='producto'>
-  //   <img src={imagen} alt=""/>
-  //   <div className='descripcionProducto'>
-  //   <h3 className='productoTitulo'>{nombre}</h3>
-  //   <h6 className='cantidadProducto'>{cantidad}</h6>
-  //   <p className='productoDetalles'>{detalles}</p>
-  //   <span className='productoPrecio'>{precio}</span>
-  //   </div>
-  //   <div>
-  // <ItemCount stock={cantidad}/>
-  //   </div>
-  //   </div>
 
   )
 }

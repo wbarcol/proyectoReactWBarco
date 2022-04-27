@@ -27,32 +27,11 @@ function Item({product}) {
                   </h3>
                   <p className="mt-1 text-sm text-gray-500">{product.cantidad +  ' Disponibles'}</p>
                 </div>
-                <p className="text-sm font-medium text-gray-900">{product.precio}</p>
+                <p className="text-sm font-medium text-gray-900">U$D {product.precio}</p>
               </div>
             </div>
 
     
-
-    // <div className='producto'>
-    // <img src={producto.imagen} alt=""/>
-    // <div className='descripcionProducto'>
-    // <h3 className='productoTitulo'>{producto.nombre}</h3>
-    // <div>
-    // <Link to={`/item/${producto.id}`}>Ver detalle</Link>
-    // </div>
-    // <span className='productoPrecio'>{producto.precio}</span>
-    // </div>
-    // </div>
-
-
-/* <Card key={id} style={{ width: '18rem' }}>
-        <Card.Img variant="top" src={imagen} />
-        <Card.Body>
-            <Card.Title>{nombre}</Card.Title>
-            <Card.Text>{precio}</Card.Text>
-            <ItemCount stock={5}/>
-        </Card.Body>
-        </Card> */
   )
 }
 

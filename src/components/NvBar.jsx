@@ -1,14 +1,17 @@
 
-import React from 'react';
+import React, { useContext } from 'react'
 import logo from '../assets/img/logo.png'
 import { Container, Navbar, Nav, NavDropdown,} from 'react-bootstrap';
 import '../App.css';
 import Icon from './Icon';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../contex/CartContex'
 
 
 
 export default function NvBar(){
+
+  const { cart } = useContext(CartContext);
 
     return(
 <div>
@@ -24,7 +27,7 @@ export default function NvBar(){
           <NavDropdown.Item as={Link} to={'/category/repuestos'}> REPUESTOS </NavDropdown.Item>
           <NavDropdown.Item as={Link} to={'/category/accesorios'}> ACCESORIOS</NavDropdown.Item>
         </NavDropdown>
-        <Nav.Link as={Link} to={'/cart'} ><Icon cant={0} /></Nav.Link>
+        <Nav.Link as={Link} to={'/cart'} ><Icon cant={cart.length} /></Nav.Link>
       </Nav>
     </Navbar.Collapse>
   </Container>
