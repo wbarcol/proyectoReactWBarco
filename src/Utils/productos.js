@@ -57,7 +57,7 @@ const productos = [
         imagen: 'https://github.com/wbarcol/proyectoReactWBarco/blob/main/src/assets/img/cadena.jpg?raw=true',
         cantidad: 12,
         detalles: 'Cadena para bicicleta, 116 eslabones - (1/2x3/32)" marca TEC',
-        categoria: 'repuestos'
+        categoria: 'repuestos',
     }
     
 ]

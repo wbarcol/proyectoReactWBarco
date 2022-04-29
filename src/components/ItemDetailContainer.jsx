@@ -3,6 +3,7 @@ import '../App.css';
 import ItemDetail from "./ItemDetail";
 import { traerProducto } from '../Utils/productos';
 import { useParams } from 'react-router-dom';
+import { getFirestore, doc, getDoc } from 'firebase/firestore';
 // import customFetch from '../Utils/customFetch';
 // import productos from '../Utils/productos';
 
@@ -14,14 +15,26 @@ export default function ItemDetailContainer(){
     const {id} = useParams();
 
     useEffect(() => {
-        traerProducto(id)
-            .then((res) => {
-                setProducto(res);
-            })
-            .catch((error) => {
-                console.log(error);
-            });
-    }, [id]);
+
+        const db = getFirestore();
+        const prodRef = doc(db, "products", id);
+        getDoc(prodRef).then((res) => {
+            setProducto({id: res.id, ...res.data()});
+        });
+  
+    }, [])
+  
+
+    
+    // useEffect(() => {
+    //     traerProducto(id)
+    //         .then((res) => {
+    //             setProducto(res);
+    //         })
+    //         .catch((error) => {
+    //             console.log(error);
+    //         });
+    // }, [id]);
 
     return(
 

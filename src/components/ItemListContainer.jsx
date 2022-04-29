@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import ItemList from "./ItemList";
 // import customFetch from '../Utils/customFetch';
 import { traerProductos } from '../Utils/productos';
+import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
 
 
 export default function ItemListContainer(){
@@ -13,12 +14,23 @@ export default function ItemListContainer(){
 
         const { categoryId } = useParams();
 
-        useEffect(() => {
-            traerProductos(categoryId)
-                .then((res) => setProductos(res))
-                .catch((error) => console.log(error));
-        }, [categoryId]);
+        // useEffect(() => {
+        //     traerProductos(categoryId)
+        //         .then((res) => setProductos(res))
+        //         .catch((error) => console.log(error));
+        // }, [categoryId]);
     
+        useEffect(() => {
+            const db = getFirestore();
+      
+            let productosRef = collection(db, 'products');
+            if (categoryId) productosRef = query(productosRef, where("categoria", "==", categoryId));
+            
+            getDocs(productosRef).then((res) => {
+                setProductos(res.docs.map(prod => ({id: prod.id, ...prod.data()})));
+            });
+              
+        }, [categoryId]);
 
     return(
 
@@ -32,8 +44,6 @@ export default function ItemListContainer(){
         <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
 
 
-{/* <div className='mainProductos'>
-<div className='containerProductos'> */}
 <ItemList productos={productos}/>
 </div>
 </div>
