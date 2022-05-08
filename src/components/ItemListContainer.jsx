@@ -13,12 +13,6 @@ export default function ItemListContainer(){
 
 
         const { categoryId } = useParams();
-
-        // useEffect(() => {
-        //     traerProductos(categoryId)
-        //         .then((res) => setProductos(res))
-        //         .catch((error) => console.log(error));
-        // }, [categoryId]);
     
         useEffect(() => {
             const db = getFirestore();

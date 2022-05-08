@@ -8,6 +8,7 @@ import Principal from './components/Principal';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import Banner from './components/Banner';
 import Cart from './components/Cart';
+import Validacion from './components/Validacion';
 import CartContextProvider from './contex/CartContex';
 
 
@@ -24,6 +25,7 @@ function App() {
           <Route exact path='/category/:categoryId'element={<><Banner/>,<ItemListContainer/></>} />
           <Route exact path='/item/:id'element={<><Banner/>,<ItemDetailContainer/></>} />
           <Route exact path='/cart' element={<><Banner/>,<Cart/></>} />
+          <Route exact path='/validar' element={<><Banner/>,<Validacion/></>} />
         </Routes>
       </div>
     </BrowserRouter>

@@ -1,17 +1,3 @@
-// import React from "react";
-// import '../App.css';
-
-// export default function Cart(){
-
-//     return(
-// <>
-//       <div> CARRITO DE COMPRA</div>
-
-
-// </>
-//     );
-// }
-
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../contex/CartContex';
@@ -144,12 +130,13 @@ const CartDetail = () => {
               <span>TOTAL</span>
               <span>U$D {total()}</span>
             </div>
+            <Link to={'/validar'}> 
             <button
-              onClick={buyAll}
               className='bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full'
             >
-              FINALIZAR COMPRA
+              COMPRAR
             </button>
+            </Link> 
           </div>
         </div>
       </div>
