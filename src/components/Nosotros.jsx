@@ -29,14 +29,14 @@ export default function Nosotros(){
                     <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
                       <div className="w-44 h-64 rounded-lg overflow-hidden sm:opacity-0 lg:opacity-100">
                         <img
-                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-01.jpg"
+                          src="https://github.com/wbarcol/proyectoReactWBarco/blob/main/src/assets/img/cliente1.png?raw=true"
                           alt=""
                           className="w-full h-full object-center object-cover"
                         />
                       </div>
                       <div className="w-44 h-64 rounded-lg overflow-hidden">
                         <img
-                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-02.jpg"
+                          src="https://github.com/wbarcol/proyectoReactWBarco/blob/main/src/assets/img/cliente2.png?raw=true"
                           alt=""
                           className="w-full h-full object-center object-cover"
                         />
