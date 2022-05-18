@@ -137,8 +137,6 @@ onSubmit={(valores) => {
     <button type='submit'>FINALIZAR COMPRA</button>
 </Form>
     )}
-
-    
 </Formik>
 </div>
 </div>

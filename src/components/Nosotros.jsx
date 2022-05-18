@@ -11,7 +11,7 @@ export default function Nosotros(){
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:static">
           <div className="sm:max-w-lg">
             <h1 className="text-4xl font font-extrabold tracking-tight text-gray-900 sm:text-6xl">
-              ¡Clientes felices recorriendo km de felicidad!
+              ¡Clientes felices recorriendo km's de felicidad!
             </h1>
             <p className="mt-4 text-xl text-gray-500">
               Detrás de cada cliente hay una historia, nos alegra poder ser parte de cada kilometro recorrido. 
@@ -45,21 +45,21 @@ export default function Nosotros(){
                     <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
                       <div className="w-44 h-64 rounded-lg overflow-hidden">
                         <img
-                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-03.jpg"
+                          src="https://github.com/wbarcol/proyectoReactWBarco/blob/main/src/assets/img/cliente3.png?raw=true"
                           alt=""
                           className="w-full h-full object-center object-cover"
                         />
                       </div>
                       <div className="w-44 h-64 rounded-lg overflow-hidden">
                         <img
-                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-04.jpg"
+                          src="https://github.com/wbarcol/proyectoReactWBarco/blob/main/src/assets/img/cliente4.png?raw=true"
                           alt=""
                           className="w-full h-full object-center object-cover"
                         />
                       </div>
                       <div className="w-44 h-64 rounded-lg overflow-hidden">
                         <img
-                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-05.jpg"
+                          src="https://github.com/wbarcol/proyectoReactWBarco/blob/main/src/assets/img/cliente5.png?raw=true"
                           alt=""
                           className="w-full h-full object-center object-cover"
                         />
@@ -68,14 +68,14 @@ export default function Nosotros(){
                     <div className="flex-shrink-0 grid grid-cols-1 gap-y-6 lg:gap-y-8">
                       <div className="w-44 h-64 rounded-lg overflow-hidden">
                         <img
-                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-06.jpg"
+                          src="https://github.com/wbarcol/proyectoReactWBarco/blob/main/src/assets/img/cliente6.png?raw=true"
                           alt=""
                           className="w-full h-full object-center object-cover"
                         />
                       </div>
                       <div className="w-44 h-64 rounded-lg overflow-hidden">
                         <img
-                          src="https://tailwindui.com/img/ecommerce-images/home-page-03-hero-image-tile-07.jpg"
+                          src="https://github.com/wbarcol/proyectoReactWBarco/blob/main/src/assets/img/cliente7.png?raw=true"
                           alt=""
                           className="w-full h-full object-center object-cover"
                         />

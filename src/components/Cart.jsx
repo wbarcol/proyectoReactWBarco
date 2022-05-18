@@ -147,7 +147,10 @@ const Cart = () => {
         </div>
       </div>
     </div>
+    {cart.length <= 0 && <div className='carroVacio'> CARRITO VACIO </div> }
     </div>
+
+
   );
 };
 

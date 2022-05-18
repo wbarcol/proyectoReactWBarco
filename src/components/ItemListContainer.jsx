@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import ItemList from "./ItemList";
 import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
 import Principal from './Principal';
+import Banner from './Banner';
 
 
 export default function ItemListContainer(){
@@ -28,7 +29,8 @@ export default function ItemListContainer(){
     return(
 
 <div className='App'>
-<Principal/>
+
+{(!categoryId) ? <Principal/> : <Banner/> }
 
 <div className="fondoC">
 <div className="bg-white">

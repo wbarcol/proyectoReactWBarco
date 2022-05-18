@@ -66,8 +66,6 @@ const sendOrder = () => {
             <Venta 
             orderID={orderID} />
         } 
-
-
 </div>
 
     );
