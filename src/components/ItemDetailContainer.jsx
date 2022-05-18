@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import { getFirestore, doc, getDoc } from 'firebase/firestore';
 
 
+
 export default function ItemDetailContainer(){
 
     const [producto, setProducto] = useState({});
@@ -22,19 +23,11 @@ export default function ItemDetailContainer(){
     }, [])
   
 
-    
-    // useEffect(() => {
-    //     traerProducto(id)
-    //         .then((res) => {
-    //             setProducto(res);
-    //         })
-    //         .catch((error) => {
-    //             console.log(error);
-    //         });
-    // }, [id]);
+
 
     return(
 
+<div className='App'>
 
 
 <div className="bg-white">
@@ -45,6 +38,7 @@ export default function ItemDetailContainer(){
 
 
 <ItemDetail {...producto}/>
+</div>
 </div>
 </div>
 </div>

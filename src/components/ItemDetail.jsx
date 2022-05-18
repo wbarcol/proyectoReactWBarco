@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../contex/CartContex'
 
 
-// import Item from './Item'
-
 function ItemDetail(producto) {
 
   const { addToCart} = useContext(CartContext);
@@ -22,6 +20,7 @@ const onAdd = (count) =>{
 
   return (
 
+    <div className='App'>
     <div className='containerDetail'>
     <img src={producto.imagen} alt={producto.nombre} />
     <div className='containerDetailInfo'>
@@ -41,6 +40,7 @@ const onAdd = (count) =>{
         }
 
     </div>
+</div>
 </div>
 
   )

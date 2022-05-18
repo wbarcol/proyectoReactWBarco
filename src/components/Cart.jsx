@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../contex/CartContex';
 import Icon from './Icon';
 
-const CartDetail = () => {
+const Cart = () => {
   const { cart, removeFromCart, buyAll, removeUni, addUni, total} = useContext(CartContext);
 
   console.log(cart);
 
   return (
+    <div className='App'>
     <div className='container mx-auto mt-10'>
       <div className='flex shadow-md my-10'>
         <div className='w-3/4 bg-white px-10 py-10'>
@@ -32,7 +33,7 @@ const CartDetail = () => {
           </div>
           {cart.length > 0 &&
             cart.map((item) => (
-              <div className='flex items-center hover:bg-gray-100 -mx-8 px-6 py-5'>
+              <div key={item.id} className='flex items-center hover:bg-gray-100 -mx-8 px-6 py-5'>
                 <div className='flex w-2/5'>
                   <div className='w-20'>
                     <img className='h-24' src={item.imagen} alt='algo' />
@@ -115,7 +116,7 @@ const CartDetail = () => {
             </div>
             {cart.length > 0 &&
             cart.map((item) => (
-            <div className='flex justify-between mt-10 mb-5'>
+            <div key={item.id} className='flex justify-between mt-10 mb-5'>
             <span className='font-semibold text-xs '>{item.nombre}</span>
             <span className='font-semibold text-xs'>{item.count}</span>
             </div>
@@ -130,18 +131,24 @@ const CartDetail = () => {
               <span>TOTAL</span>
               <span>U$D {total()}</span>
             </div>
+
+            {cart.length > 0 && 
+
             <Link to={'/validar'}> 
             <button
               className='bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full'
             >
               COMPRAR
             </button>
-            </Link> 
+            </Link>
+            }
+
           </div>
         </div>
       </div>
     </div>
+    </div>
   );
 };
 
-export default CartDetail;
+export default Cart;

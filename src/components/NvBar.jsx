@@ -22,7 +22,7 @@ export default function NvBar(){
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">
         <Nav.Link as={Link} to={'/'}>INICIO</Nav.Link>
-        <Nav.Link href="#link">NOSOTROS</Nav.Link>
+        <Nav.Link as={Link} to={'/clientes'}>CLIENTES</Nav.Link>
         <NavDropdown title="COMPRAR" id="basic-nav-dropdown">
           <NavDropdown.Item as={Link} to={'/category/repuestos'}> REPUESTOS </NavDropdown.Item>
           <NavDropdown.Item as={Link} to={'/category/accesorios'}> ACCESORIOS</NavDropdown.Item>

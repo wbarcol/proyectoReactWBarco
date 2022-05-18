@@ -2,9 +2,8 @@ import React, { useEffect, useState } from 'react'
 import '../App.css';
 import { useParams } from 'react-router-dom';
 import ItemList from "./ItemList";
-// import customFetch from '../Utils/customFetch';
-import { traerProductos } from '../Utils/productos';
 import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
+import Principal from './Principal';
 
 
 export default function ItemListContainer(){
@@ -28,7 +27,8 @@ export default function ItemListContainer(){
 
     return(
 
-
+<div className='App'>
+<Principal/>
 
 <div className="fondoC">
 <div className="bg-white">
@@ -39,6 +39,7 @@ export default function ItemListContainer(){
 
 
 <ItemList productos={productos}/>
+</div>
 </div>
 </div>
 </div>

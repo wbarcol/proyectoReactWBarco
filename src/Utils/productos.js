@@ -93,3 +93,35 @@ export const traerProducto = (id) => {
         }, 100);
     });
 };
+
+{/* {({values, errors, touched, handleSubmit, handleChange, handleBlur}) => (
+<form onSubmit={handleSubmit}>
+    <div>
+        <label htmlFor="nombre">Nombre</label>
+        <input 
+        type="text" 
+        id="nombre" 
+        name="nombre" 
+        placeholder='Ingrese su nombre' 
+        values={values.nombre} 
+        onChange={handleChange}
+        onBlur={handleBlur}
+        />
+        {touched.nombre && errors.nombre && <div className='error'>{errors.nombre} </div>}
+    </div>
+
+    <div>
+        <label htmlFor="nombre">Email</label>
+        <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        placeholder='ejemplo@ejemplo.com' 
+        values={values.email}
+        onChange={handleChange}
+        />
+        {touched.email && errors.email && <div className='error'>{errors.email} </div>}
+    </div>
+    <button type='submit'>ENVIAR</button>
+</form>
+    )} */}

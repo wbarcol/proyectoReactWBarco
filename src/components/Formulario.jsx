@@ -48,10 +48,6 @@ export default function Formulario({name, lastname, phone, email, setName, setLa
         </div>
 
 
-    {/* <div class="formulario__mensaje" id="formulario__mensaje">
-        <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Verificar los datos ingresados</p>
-    </div> */}
-
     <div className="formulario__grupo formulario__grupo-btn-enviar">
 <button type="submit" className="formulario__btn">Finalizar compra</button>
     </div>
